@@ -1,0 +1,204 @@
+/* Variables de couleur et police */
+:root {
+  --color-background: #2e2e2e;
+  --color-primary: #1c1c1c;
+  --color-secondary: #e6e6d6;
+  --color-accent: #d3d3d3;
+  --color-text: #ffffff;
+  --font-primary: 'Poppins', sans-serif;
+  --font-size-base: 16px;
+  --font-size-large: 1.25rem;
+  --font-size-small: 0.875rem;
+}
+
+/* Styles globaux */
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Ajustement du padding pour éviter que la nav barre dépasse sur la section hero */
+header {
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--color-primary);
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ajustement du margin-top pour la section hero afin qu'elle ne soit pas cachée par la nav barre */
+#hero {
+  margin-top: 70px; /* Ajuster cette valeur en fonction de la hauteur réelle de votre header */
+}
+
+/* Autres sections */
+section {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+/* Suppression des icônes GitHub et LinkedIn dans la section Contact */
+.contact .socials {
+  display: none;
+}
+
+
+header h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--color-secondary);
+  transform: scale(1.1);
+}
+
+/* Styles des sections */
+section {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-secondary);
+}
+
+/* Styles spécifiques aux sections */
+.about p, .skills p, .projects p, .experience p {
+  margin-bottom: 1.5rem;
+}
+
+.skills-container, .project, .experience-item {
+  background-color: var(--color-primary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles des liens créatifs */
+.cta-buttons {
+  margin-top: 1.5rem;
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin: 0 0.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.cta.github {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.cta.linkedin {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.cta:hover {
+  transform: scale(1.05);
+}
+
+/* Styles des icônes de réseaux sociaux */
+.socials {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.socials li {
+  margin: 0 0.5rem;
+}
+
+.socials li a {
+  color: var(--color-text);
+  font-size: var(--font-size-large);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.socials li a:hover {
+  transform: scale(1.1);
+}
+
+.socials li img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.socials li img:hover {
+  transform: scale(1.2);
+}
+
+/* Styles du pied de page */
+footer {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  border-top: 4px solid var(--color-secondary);
+}
+.contact .socials li {
+  margin: 10px 0; /* Espacement entre les éléments */
+}
+
+.contact .socials a {
+  color: var(--color-secondary); /* Utilisez une couleur différente pour l'email */
+  text-decoration: none;
+  font-size: var(--font-size-large); /* Ajuster la taille de la police */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact .socials a i {
+  margin-right: 8px; /* Espacement entre l'icône et le texte */
+  font-size: 1.5rem; /* Taille de l'icône */
+}
+
+.contact .socials a:hover {
+  color: var(--color-accent); /* Changement de couleur au survol */
+}
+/* Afficher la section des réseaux sociaux */
+.contact .socials {
+  display: block;
+  margin-top: 20px; /* Ajout d'un espace pour la lisibilité */
+}
